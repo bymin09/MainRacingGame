@@ -26,6 +26,8 @@ namespace Mean
 
         DriftTestScript Car;
         GameData gameData;
+        public Canvas MiniStore = new Canvas();
+
         // Start is called before the first frame update
         void Start()
         {
@@ -44,6 +46,12 @@ namespace Mean
             {
                 SetItem(other.transform);
             }
+        }
+
+        public void Hide()
+        {
+            MiniStore.gameObject.SetActive(false);
+            gameData.SetStop(1);
         }
 
         void SetItem(Transform other)
@@ -66,7 +74,11 @@ namespace Mean
                 case ItemStatus.speedUp2:
                     other.GetComponent<Rigidbody>().AddForce(other.forward * 100000, ForceMode.Impulse);
                     break;
-
+                case ItemStatus.openMiniStore:
+                    MiniStore.gameObject.SetActive(true);
+                    gameData.SetStop(2);
+                    Invoke("Hide", 2.0f);
+                    break;
                     //case ItemStatus.engine1:
                     //    if(gameData.engineNum < 1)
                     //    {

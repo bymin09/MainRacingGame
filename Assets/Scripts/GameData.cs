@@ -13,6 +13,7 @@ namespace Mean
         public int engineNum = 0;
         public int stageNum = 0;
         public int sceneNum = 0;
+        public int nowScene = 0;
         public int maxToque = 150;
         public int score = 0;
         public int gold = 10000;
@@ -63,21 +64,34 @@ namespace Mean
         {
             sceneNum = num;
             SceneManager.LoadScene(num);
+            nowScene = num;
             if(num > 1)
             {
                 stageNum = num - 1; // ?
             }
         }
 
+        public void ReStartScene(int num)
+        {
+            if(num == 1)
+            {
+                SceneManager.LoadScene(nowScene);
+            }
+        }
+
         public void SetStop(int num)
         {
-            if(num == 0)
+            if (num == 0)
             {
                 Time.timeScale = 0;
             }
-            else if(num == 1)
+            else if (num == 1)
             {
                 Time.timeScale = 1;
+            }
+            else if(num == 2)
+            {
+                Time.timeScale = 0.5f;
             }
         }
     }

@@ -75,6 +75,8 @@
     <Compile Include="Assets\Scripts\SelectMap.cs" />
     <Compile Include="Assets\Scripts\CarController.cs" />
     <Compile Include="Assets\Scripts\Test.cs" />
+    <Compile Include="Assets\Scripts\GameUI.cs" />
+    <Compile Include="Assets\Scripts\PingController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Mean.asmdef" />

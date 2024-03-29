@@ -22,14 +22,17 @@ public class DriftTestScript : MonoBehaviour
     [SerializeField] private Transform frontLeftWheelTransform, frontRightWheelTransform;
     [SerializeField] private Transform rearLeftWheelTransform, rearRightWheelTransform;
 
+    private Quaternion FLWTransformPos;
+    private Quaternion FRWTransformPos;
     // float SpeedQue = 10.0f;
 
     private void FixedUpdate()
     {
+        // SetWheelsPos();
         GetInput();
         HandleMotor();
         HandleSteering();
-        // UpdateWheels();
+        //UpdateWheels();
     }
 
     private void GetInput()
@@ -46,8 +49,8 @@ public class DriftTestScript : MonoBehaviour
 
     private void HandleMotor()
     {
-        frontLeftWheelCollider.motorTorque = verticalInput * motorForce;
-        frontRightWheelCollider.motorTorque = verticalInput * motorForce;
+        rearLeftWheelCollider.motorTorque = verticalInput * motorForce;
+        rearRightWheelCollider.motorTorque = verticalInput * motorForce;
         currentbreakForce = isBreaking ? breakForce : 0f;
         ApplyBreaking();
     }
@@ -83,5 +86,19 @@ public class DriftTestScript : MonoBehaviour
     //    wheelCollider.GetWorldPose(out pos, out rot);
     //    wheelTransform.rotation = rot;
     //    wheelTransform.position = pos;
+    //}
+
+    //public void SetWheelsPos()
+    //{
+    //    SetWheelsRot(frontLeftWheelTransform);
+    //    SetWheelsRot(frontRightWheelTransform);
+    //    SetWheelsRot(rearLeftWheelTransform);
+    //    SetWheelsRot(rearRightWheelTransform);
+    //}
+    //public void SetWheelsRot(Transform wheelTransform)
+    //{
+    //    FLWTransformPos = wheelTransform.transform.rotation;
+    //    FRWTransformPos = wheelTransform.transform.rotation;
+        
     //}
 }
