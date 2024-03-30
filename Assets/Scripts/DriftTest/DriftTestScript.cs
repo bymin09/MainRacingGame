@@ -26,6 +26,11 @@ public class DriftTestScript : MonoBehaviour
     private Quaternion FRWTransformPos;
     // float SpeedQue = 10.0f;
 
+    private void Update()
+    {
+        //WheelReset();
+    }
+
     private void FixedUpdate()
     {
         // SetWheelsPos();
@@ -68,6 +73,14 @@ public class DriftTestScript : MonoBehaviour
         currentSteerAngle = maxSteerAngle * horizontalInput;
         frontLeftWheelCollider.steerAngle = currentSteerAngle;
         frontRightWheelCollider.steerAngle = currentSteerAngle;
+    }
+
+    void WheelReset()
+    {
+        frontLeftWheelTransform.transform.position = frontLeftWheelCollider.transform.position;
+        frontRightWheelTransform.transform.position = frontRightWheelCollider.transform.position;
+        rearLeftWheelTransform.transform.position = rearLeftWheelCollider.transform.position;
+        rearRightWheelTransform.transform.position = rearRightWheelCollider.transform.position;
     }
 
     //private void UpdateWheels()
