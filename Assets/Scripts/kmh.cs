@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Mean
 {
-    public class Kmh : MonoBehaviour
+    public class kmh : MonoBehaviour
     {
         public DriftTestScript carController;
         // Start is called before the first frame update

@@ -11,10 +11,11 @@ namespace Mean
         public string rank;
         public int tireNum = 0;
         public int engineNum = 0;
+        public int CarModel = 0;
         public int stageNum = 0;
         public int sceneNum = 0;
         public int nowScene = 0;
-        public int maxToque = 150;
+        public int maxToque = 2000;
         public int score = 0;
         public int gold = 10000;
         public int[] tireCost =

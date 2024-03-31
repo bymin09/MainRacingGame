@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Data
   - Enemy
+  - Target
   layers:
   - Default
   - TransparentFX

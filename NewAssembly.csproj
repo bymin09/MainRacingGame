@@ -60,15 +60,18 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\errorCheckCode\CheckErrorEnd.cs" />
     <Compile Include="Assets\Scripts\DriftTest\DriftTestScript.cs" />
+    <Compile Include="Assets\Scripts\ClearGame.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\MiniStore.cs" />
+    <Compile Include="Assets\Scripts\DiedGame.cs" />
     <Compile Include="Assets\Scripts\Store.cs" />
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\kmh.cs" />
     <Compile Include="Assets\Scripts\Goal.cs" />
     <Compile Include="Assets\Scripts\PingController.cs" />
     <Compile Include="Assets\Scripts\CarAI.cs" />
+    <Compile Include="Assets\Scripts\OtherPingController.cs" />
     <Compile Include="Assets\Scripts\errorCheckCode\CheckError.cs" />
     <Compile Include="Assets\Scripts\SchoolTest2.cs" />
     <Compile Include="Assets\Scripts\CheatUI.cs" />

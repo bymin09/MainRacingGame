@@ -77,7 +77,7 @@ namespace Mean
                 case ItemStatus.openMiniStore:
                     MiniStore.gameObject.SetActive(true);
                     gameData.SetStop(2);
-                    Invoke("Hide", 2.0f);
+                    Invoke("Hide", 10.0f);
                     break;
                     //case ItemStatus.engine1:
                     //    if(gameData.engineNum < 1)

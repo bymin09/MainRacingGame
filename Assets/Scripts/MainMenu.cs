@@ -14,6 +14,7 @@ namespace Mean
         {
             gameData = GameObject.FindGameObjectWithTag("Data").GetComponent<GameData>();
             SetRank();
+            gameData.SetStop(1);
         }
 
         void Update()
